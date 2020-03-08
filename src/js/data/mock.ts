@@ -10,11 +10,11 @@ export const data = {
           person: 'rick'
         },
         {
-          timestamp: 'Tue Nov 05 1985 06:23:20 GMT+0530 (IST)',
+          timestamp: 'Tue Nov 04 1985 06:23:20 GMT+0530 (IST)',
           person: 'rick'
         },
         {
-          timestamp: 'Tue Nov 05 1985 06:23:20 GMT+0530 (IST)',
+          timestamp: 'Tue Nov 03 1985 06:23:20 GMT+0530 (IST)',
           person: 'rick'
         },
       ],
@@ -25,15 +25,15 @@ export const data = {
       frequency: '2 weeks',
       history: [
         {
-          timestamp: 'Tue Nov 05 1985 06:23:20 GMT+0530 (IST)',
+          timestamp: 'Tue Nov 15 1985 06:23:20 GMT+0530 (IST)',
           person: 'rick'
         },
         {
-          timestamp: 'Tue Nov 05 1985 06:23:20 GMT+0530 (IST)',
+          timestamp: 'Tue Nov 11 1985 06:23:20 GMT+0530 (IST)',
           person: 'rick'
         },
         {
-          timestamp: 'Tue Nov 05 1985 06:23:20 GMT+0530 (IST)',
+          timestamp: 'Tue Nov 09 1985 06:23:20 GMT+0530 (IST)',
           person: 'rick'
         },
       ],

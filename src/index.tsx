@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.scss';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { data } from './data/mock';
+import App from './js/App';
+import * as serviceWorker from './js/serviceWorker';
+import { data } from './js/data/mock';
 
 ReactDOM.render(<App data={data} />, document.getElementById('root'));
 

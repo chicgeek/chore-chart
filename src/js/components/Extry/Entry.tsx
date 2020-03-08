@@ -1,5 +1,5 @@
 import React from 'react';
-import { Entry as EntryType, Person } from './../types';
+import { Entry as EntryType, Person } from '../../data/types';
 
 const Entry = (
   { entry, people }: {
