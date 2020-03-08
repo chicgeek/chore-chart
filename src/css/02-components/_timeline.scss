@@ -1,0 +1,73 @@
+.group {
+  padding: 0 0 15px;
+  font-size: $grid-size;
+  overflow-x: scroll;
+  direction: rtl;
+  border-top: $border-width solid $colour-dark;
+}
+
+.timeline {
+  display: grid;
+  grid-template: 1em / repeat(60, 1em);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 60em;
+  border-bottom: $border-width solid $colour-dark;
+  background-image: repeating-linear-gradient(
+    to left,
+    $colour-grid,
+    transparent 0,
+    transparent calc(1em - 1px),
+    $colour-grid calc(1em - 1px),
+    $colour-grid 1em
+  );
+
+  &:last-of-type {
+    border-bottom-width: $border-width;
+  }
+
+  &__range {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 1em; // actual duration
+    min-height: 0.9em;
+    margin-right: -$border-width;
+    padding: 0;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      $colour-shade 1em
+    );
+    direction: ltr;
+    border-left: $border-width solid $colour-grid;
+
+    // overdue marker
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -$border-width;
+      right: 0;
+      left: 1em; // period
+      border-bottom: calc(0.05em + #{$border-width}) solid currentColor;
+      color: rgba($colour-error, 0.8);
+    }
+
+    @for $i from 1 through 30 {
+      [data-period="#{$i}"] & {
+        grid-column-end: span #{$i};
+        background-image: linear-gradient(
+          to right,
+          transparent,
+          $colour-shade #{$i}em
+        );
+
+        &:after {
+          left: #{$i}em;
+        }
+      }
+    }
+  }
+}

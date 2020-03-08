@@ -1,3 +1,8 @@
-body {
-  color: purple;
-}
+// external
+@import "../../node_modules/normalize.css/normalize";
+
+@import './00-foundation/variables';
+@import './00-foundation/accessibility';
+@import './00-foundation/base';
+@import './02-components/timeline';
+@import './02-components/marker';

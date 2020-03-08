@@ -6,13 +6,15 @@ const App = ({ data }: { data: Data }) => {
   return (
     <div>
       <h1>Foo</h1>
-      { data.chores.map(
-        chore => <Chore
-          key={chore.id}
-          chore={chore}
-          people={data.people}
-        />
-      )}
+      <div className="group">
+        { data.chores.map(
+          chore => <Chore
+            key={chore.id}
+            chore={chore}
+            people={data.people}
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,10 @@
 import React from 'react';
+import CSS from 'csstype';
 import { Entry as EntryType, Person } from '../../data/types';
+
+const style: CSS.Properties = {
+  gridColumnEnd: true ? undefined : 'span 4' // mock actual frequency
+};
 
 const Entry = (
   { entry, people }: {
@@ -7,9 +12,8 @@ const Entry = (
     people: { [name: string]: Person }
   }
 ) => (
-  <li>
-    {entry.person}
-    {people[entry.person].name}
+  <li className="timeline__range" style={style}>
+    <span className="marker" data-person={people[entry.person].name} />
   </li>
 )
 
