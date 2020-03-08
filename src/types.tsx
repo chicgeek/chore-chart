@@ -1,19 +1,21 @@
+export interface Data {
+  chores: Chore[],
+  people: { [name: string]: Person }
+}
+
 export interface Chore {
   id: string,
   description: string,
   frequency: string,
-  history: {
-    person: string,
-    timestamp: string,
-  }[],
+  history: Entry[],
 }
 
-interface Person {
+export interface Entry {
+  person: string,
+  timestamp: string,
+}
+
+export interface Person {
   name: string,
   initials: string
-}
-
-export interface Data {
-  chores: Chore[],
-  people: { [name: string]: Person }
 }

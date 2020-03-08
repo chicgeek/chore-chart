@@ -1,7 +1,8 @@
 import React from 'react';
-import { ChoreType } from './types';
+import Entry from './Entry';
+import { Chore as ChoreType, Person, Entry as EntryType } from './../types';
 
-type AppProps = { chore: ChoreType, people: PeopleType };
+type AppProps = { chore: ChoreType, people: { [name: string]: Person } };
 
 const Chore = ({ chore, people }: AppProps) => {
   return (
@@ -9,12 +10,7 @@ const Chore = ({ chore, people }: AppProps) => {
       { chore.id }
       { chore.frequency }
       <ul>
-        { chore.history.map(entry => {
-          return (<li>
-              { entry.person }
-              // { people[entry.person].name }
-          </li>)
-        }) }
+        { chore.history.map((entry: EntryType) => <Entry entry={entry} people={people} />) }
       </ul>
     </div>
   )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chore } from './components/Chore';
+import Chore from './components/Chore';
 import { Data } from './types';
 
 type AppProps = { data: Data };
