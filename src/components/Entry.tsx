@@ -1,9 +1,12 @@
 import React from 'react';
 import { Entry as EntryType, Person } from './../types';
 
-type AppProps = { entry: EntryType, people: { [name: string]: Person } };
-
-const Entry = ({ entry, people }: AppProps) => (
+const Entry = (
+  { entry, people }: {
+    entry: EntryType,
+    people: { [name: string]: Person }
+  }
+) => (
   <li>
     {entry.person}
     {people[entry.person].name}

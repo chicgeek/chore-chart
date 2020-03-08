@@ -2,9 +2,7 @@ import React from 'react';
 import Chore from './components/Chore';
 import { Data } from './types';
 
-type AppProps = { data: Data };
-
-const App = ({ data }: AppProps) => {
+const App = ({ data }: { data: Data }) => {
   return (
     <div>
       <h1>Foo</h1>
