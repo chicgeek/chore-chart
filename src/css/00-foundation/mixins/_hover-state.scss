@@ -1,0 +1,22 @@
+/// For hover and focus styles
+///
+/// @group Utilities
+/// @author Laura Kishimoto
+///
+/// @param {string} @content - Styles to apply in hover / focus state.
+///
+/// @example scss
+/// a {
+///   text-decoration: none;
+///
+///   @include hover-state {
+///     text-decoration: underline;
+///   }
+/// }
+@mixin hover-state {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}

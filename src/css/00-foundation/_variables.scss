@@ -1,11 +1,14 @@
-$grid-size: 5rem;
+$grid-size: 6rem;
 $border-width: 1px;
 
 $colour-gold: #ffc107;
 $colour-dark: #bbb;
 $colour-white: #fff;
+$colour-green: #92de2d;
+$colour-red: #ce1f1f;
 
-$colour-success: #92de2d;
-$colour-error: #ce1f1f;
+$colour-success: $colour-green;
+$colour-error: $colour-red;
+$colour-background: $colour-white;
 $colour-grid: rgba($colour-dark, 0.15);
-$colour-shade: rgba(111, 146, 148, 0.20);
+$colour-shade: rgba($colour-dark, 0.20);

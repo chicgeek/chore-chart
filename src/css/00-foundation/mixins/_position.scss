@@ -1,0 +1,35 @@
+/// Position an element absolutely
+/// with optional parameters for top / right / bottom / left
+///
+/// @group Utilities
+/// @author Laura Kishimoto
+///
+/// @example scss
+///   .foo {
+///     @include absolute();
+///   }
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/// Position an element with fixed placement
+/// with optional parameters for top / right / bottom / left
+///
+/// @group Utilities
+/// @author Laura Kishimoto
+///
+/// @example scss
+///   .foo {
+///     @include fixed();
+///   }
+@mixin fixed($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

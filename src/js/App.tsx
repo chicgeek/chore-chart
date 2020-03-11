@@ -11,7 +11,7 @@ const App = ({ data }: { data: Data }) => {
           chore => <Chore
             key={chore.id}
             chore={chore}
-            people={data.people}
+            peopleList={data.people}
           />
         )}
       </div>

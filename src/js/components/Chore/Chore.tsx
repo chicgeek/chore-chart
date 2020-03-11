@@ -1,5 +1,5 @@
 import React from 'react';
-import Entry from '../Extry/Entry';
+import Entry from '../Entry/Entry';
 import { Chore as ChoreType, Person, Entry as EntryType } from '../../data/types';
 
 interface Spans {
@@ -14,18 +14,23 @@ const spans: Spans = {
 }
 
 const Chore = (
-  { chore, people }: {
+  { chore, peopleList }: {
     chore: ChoreType,
-    people: { [name: string]: Person }
+    peopleList: { [name: string]: Person }
   }
 ) => {
   return (
     <ul className="timeline" data-period={ spans[chore.frequency] }>
+      <Entry
+        key={`${chore.id}-current`}
+        peopleList={peopleList}
+        current={true}
+      />
       { chore.history.map(
         (entry: EntryType) => <Entry
-          entry={entry}
-          people={people}
           key={`${chore.id}-${entry.timestamp}`}
+          person={entry.person}
+          peopleList={peopleList}
         />
       ) }
     </ul>

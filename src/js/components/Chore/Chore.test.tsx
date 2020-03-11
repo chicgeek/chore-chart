@@ -5,7 +5,7 @@ import { data as mock } from './../../data/mock';
 
 const defaultProps = {
   chore: mock.chores[0],
-  people: mock.people
+  peopleList: mock.people
 }
 
 it('renders without crashing', () => {

@@ -1,8 +1,11 @@
 // external
 @import "../../node_modules/normalize.css/normalize";
 
+// foundation
+@import './00-foundation/mixins/all';
 @import './00-foundation/variables';
-@import './00-foundation/accessibility';
 @import './00-foundation/base';
+
+// components
 @import './02-components/timeline';
 @import './02-components/marker';
