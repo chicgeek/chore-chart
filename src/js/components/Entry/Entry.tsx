@@ -4,7 +4,7 @@ import { Person } from '../../data/types';
 import Marker from '../Marker/Marker';
 
 const style: CSS.Properties = {
-  gridColumnEnd: false ? undefined : 'span 4' // mock actual frequency
+  gridColumnEnd: true ? undefined : 'span 4' // mock actual frequency
 };
 
 const Entry = (

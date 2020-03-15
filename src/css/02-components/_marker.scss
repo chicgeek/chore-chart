@@ -31,7 +31,7 @@
 
   &::after {
     content: '';
-    @include absolute();
+    @include absolute-fill;
     background: no-repeat center/30%;
     background: no-repeat center/20%;
     background-image: url(./../../images/icons/plus.svg);

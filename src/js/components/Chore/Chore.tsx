@@ -21,6 +21,11 @@ const Chore = (
 ) => {
   return (
     <ul className="timeline" data-period={ spans[chore.frequency] }>
+      <div className="timeline__label">
+        <h2 className="timeline__heading">
+          { chore.id }
+        </h2>
+      </div>
       <Entry
         key={`${chore.id}-current`}
         peopleList={peopleList}

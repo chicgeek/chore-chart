@@ -1,3 +1,11 @@
+@mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 /// Position an element absolutely
 /// with optional parameters for top / right / bottom / left
 ///
@@ -8,12 +16,11 @@
 ///   .foo {
 ///     @include absolute();
 ///   }
-@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+ @include position(absolute, $top, $right, $bottom, $left);
+}
+@mixin absolute-fill {
+  @include position(absolute, 0, 0, 0, 0);
 }
 
 /// Position an element with fixed placement
@@ -26,10 +33,9 @@
 ///   .foo {
 ///     @include fixed();
 ///   }
-@mixin fixed($top: 0, $right: 0, $bottom: 0, $left: 0) {
-  position: fixed;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin fixed($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  @include position(fixed, $top, $right, $bottom, $left);
+ }
+@mixin fixed-fill {
+  @include position(fixed, 0, 0, 0, 0);
 }

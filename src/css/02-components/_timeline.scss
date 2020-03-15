@@ -1,12 +1,13 @@
 .group {
   padding: 0 0 15px;
   font-size: $grid-size;
-  overflow-x: scroll;
+  overflow-x: auto;
   direction: rtl;
   border-top: $border-width solid $colour-dark;
 }
 
 .timeline {
+  position: relative;
   display: grid;
   grid-template: 1em / repeat(60, 1em);
   list-style: none;
@@ -25,6 +26,22 @@
 
   &:last-of-type {
     border-bottom-width: $border-width;
+  }
+
+  &__label {
+    @include fixed($left: 0);
+    display: flex;
+    align-items: center;
+    background-color: $colour-shade;
+    color: black;
+    padding: 0.2em;
+    height: 1em;
+    width: 3em;
+    z-index: 1;
+  }
+
+  &__heading {
+    font-size: 2rem;
   }
 
   &__range {
